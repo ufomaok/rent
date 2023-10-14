@@ -1,0 +1,108 @@
+import pandas as pd
+import numpy as np
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#opening excel data file
+df = pd.read_excel('data/raw/realestate.xlsx')
+print(df)
+
+#first five rows of dataset
+dffirstfive = df.head(5)
+print(dffirstfive)
+
+#general information of dataframe
+dataframeinfo = df.info()
+print(dataframeinfo)
+
+#descriptive statistics of dataframe
+dataframedescritive = df.describe()
+print(dataframedescritive)
+
+#_____________________________________________________HISTOGRAM HOUSE AGE
+#column 0. ('NO.') ordinal numbers: (skip)
+
+#column 1. house age: 
+
+#column 1.: HOUSE AGE 
+
+
+
+#HISTOGRAMS
+
+plt.subplots_adjust(wspace=1) #adjust spaces between subplots
+plt.figure(figsize=(20, 5))  # Adjust for width/height
+
+#column 1. house age: 
+
+df = pd.read_excel('realestate.xlsx')
+housenumber = df['No']
+age = df['X2 house age']
+
+
+
+bins = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+
+plt.subplot(1, 3, 1)  # one row, two column, subplot one
+
+plt.hist(age, bins = bins, edgecolor = 'black')
+plt.xlabel('Age')
+plt.ylabel('Number of House')
+plt.title(' Analysis of House Age')
+
+
+#BOXPLOTS
+
+plt.subplot(1, 3, 2)
+plt.ylabel('Number of House')
+plt.title(' Analysis of House Age')
+df.boxplot(column=['X2 house age'], grid=False, color='black')
+
+
+#BARCHART
+X = age
+Y = housenumber
+
+plt.subplot(1, 3, 3)
+plt.bar(age, housenumber)
+plt.title(' Analysis of House Age')
+plt.xlabel('age')
+plt.ylabel('Number of House')
+plt.xlim(0, 50)
+plt.show()
+
+
+#column 3. number of convenience stores
+
+
+#column 4. latitude
+#column 5. longitude
+#column 6. house price of unit area (y)
+
+
+
+#BARCHART
+#BOXPLOT
+
+
+#create scatterplot of house age vs. price 
+age = df['X2 house age']
+price = df['Y house price of unit area']
+
+
+for column in df.columns[1:]:
+    plt.figure (figsize = (20, 5))
+    plt.xlabel (column)
+    plt.ylabel ('House Price of Unit Area')
+    plt.grid (True)
+    plt.title (f'Scatter for {column} vs. House Price of Unit Area')
+    plt.scatter (df[column], df['Y house price of unit area'], color = 'orange')
+   
+   
+    plt.xlim(0, 100)
+    plt.xticks(rotation=45)
+
+    plt.show ()
+
