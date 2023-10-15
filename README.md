@@ -6,17 +6,12 @@ The purpose of this project is to analyze rental prices in Taiwan by looking at 
 * Machine Learning
 * Data Visualization
 * Predictive Modeling
-* etc.
+
 
 ### Technologies
-* R 
 * Python
-* D3
-* PostGres, MySql
 * Pandas, jupyter
-* HTML
-* JavaScript
-* etc. 
+
 
 ## Project Description
 EDITING
