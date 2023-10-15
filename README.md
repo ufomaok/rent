@@ -10,7 +10,7 @@ The purpose of this project is to analyze rental prices in Taiwan by looking at 
 
 ### Technologies
 * Python
-* Pandas, jupyter
+* Pandas, Jupyter
 
 
 ## Project Description
